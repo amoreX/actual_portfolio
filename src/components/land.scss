@@ -1,0 +1,24 @@
+$nice_white:#EEF1EF;
+
+
+body{
+    margin:0px;
+    background-color: white;
+    overflow: hidden;
+}
+
+#main-container{
+    #landing-container{
+        display:flex;
+        width:100vw;
+        #about-me-container{
+            width:65vw;
+            height:100vh;
+        }
+        #pic-container{
+            width:35vw;
+            height:100vh;
+            background-color: $nice_white ;
+        }
+    }
+}
