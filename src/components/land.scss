@@ -18,41 +18,50 @@ body{
         width:100vw;
         #about-me-container{
             width:65vw;
+            z-index: 5;
             box-sizing: border-box;
             height:100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             cursor:default;
+            overflow: hidden;
             justify-content: flex-start;
             #text{
-                padding: 100px;
+                padding: 16vh;
+                z-index: 5;
                 display: flex;
                 flex-direction: column;
                 // background-color: grey;
-
+                
                 #small-title{
+                    z-index: 5;
                     font-size: 4vw;
                     font-family: "Work Sans",sans-serif;
                 }
                 #big-title{
+                    z-index: 5;
                     font-size: 10vw;
                     font-family: "Yatra One",system-ui;
                 }
-
+                
                 #rect{
                     margin-inline: auto;
+                    z-index: 5;
                     box-sizing: border-box;
                     padding:10px;
                     font-size: 1vw;
+                    border-radius: 8px;
                     font-family: "Yatra One",system-ui;
-                    background-color: #5E6572;
+                    box-shadow: 0px 0px 10px #7D98A1;
+                    // background-color: #5E6572;
                     color: white;
                 }
-
+                
                 #content{
                     font-family: "Work Sans",sans-serif;
                     margin-top: 32px;
+                    z-index: 5;
                     font-size: 1vw;
                 }
             }
@@ -60,9 +69,47 @@ body{
                 background-color: #A9B4C2;
                 font-size: 1vw;
                 padding:10px;
+                border-radius: 8px;
                 color:white;
+                position:relative;
                 font-family: "Work Sans",sans-serif;
                 cursor:pointer;
+                #nuh{
+                    z-index: 5;
+                }
+                #circle{
+                    position: absolute;
+                    top:0%;
+                    left:50%;
+                    margin-inline: auto;
+                    z-index: 2;
+                    height:25px;
+                    width:25px;
+                    // opacity:0;
+                    border-radius: 50%;
+                    background-color: #1C2321;
+                    transition:transform 0.39s ease-in-out , opacity 0.29s ease ;
+                }
+            }
+        }
+        #click{
+            z-index: 50;
+            position:absolute;
+            bottom:16%;
+            left:31%;
+            animation:jump 1s infinite;
+            font-family: "Yatra One",system-ui;
+            font-size: 1vw;
+        }
+        @keyframes jump {
+            0%{
+                transform:translateY(0px);
+            }
+            50%{
+                transform:translateY(-10px);
+            }
+            100%{
+                transform:translateY(0px);
             }
         }
         #pic-container{
@@ -70,7 +117,6 @@ body{
             height:100vh;
             background-color: $nice_white ;
             display: flex;
-
         }
     }
 }
