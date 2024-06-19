@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yatra+One&display=swap');
+
+
+
 $nice_white:#EEF1EF;
 
 
@@ -13,12 +18,59 @@ body{
         width:100vw;
         #about-me-container{
             width:65vw;
+            box-sizing: border-box;
             height:100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor:default;
+            justify-content: flex-start;
+            #text{
+                padding: 100px;
+                display: flex;
+                flex-direction: column;
+                // background-color: grey;
+
+                #small-title{
+                    font-size: 4vw;
+                    font-family: "Work Sans",sans-serif;
+                }
+                #big-title{
+                    font-size: 10vw;
+                    font-family: "Yatra One",system-ui;
+                }
+
+                #rect{
+                    margin-inline: auto;
+                    box-sizing: border-box;
+                    padding:10px;
+                    font-size: 1vw;
+                    font-family: "Yatra One",system-ui;
+                    background-color: #5E6572;
+                    color: white;
+                }
+
+                #content{
+                    font-family: "Work Sans",sans-serif;
+                    margin-top: 32px;
+                    font-size: 1vw;
+                }
+            }
+            #more{
+                background-color: #A9B4C2;
+                font-size: 1vw;
+                padding:10px;
+                color:white;
+                font-family: "Work Sans",sans-serif;
+                cursor:pointer;
+            }
         }
         #pic-container{
             width:35vw;
             height:100vh;
             background-color: $nice_white ;
+            display: flex;
+
         }
     }
 }
