@@ -135,8 +135,8 @@ export default function Landing() {
             // style={{ transform: `rotate(${picscale}deg) scale(${picrotat})` }}
             src="/nihal.png"
             alt="me"
-            initial={{ x: -700 }}
-            // transition={{type:"tween"}}
+            initial={{ x: -500 }}
+            transition={{type:"tween",ease:"easeInOut",duration:0.7}}
             // animate={{ x: 0,rotate: picscale, scale: picrotat }}
             animate={{ x: 0, }}
           />
