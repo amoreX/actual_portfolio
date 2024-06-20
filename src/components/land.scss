@@ -23,7 +23,7 @@ body{
             height:100vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            // align-items: ;
             cursor:default;
             overflow: hidden;
             justify-content: flex-start;
@@ -36,6 +36,7 @@ body{
                 
                 #small-title{
                     z-index: 5;
+                    margin-right: auto;
                     font-size: 4vw;
                     font-family: "Work Sans",sans-serif;
                 }
@@ -61,14 +62,16 @@ body{
                 #content{
                     font-family: "Work Sans",sans-serif;
                     margin-top: 32px;
+                    margin-inline: auto;
                     z-index: 5;
                     font-size: 1vw;
                 }
             }
             #more{
-                background-color: #A9B4C2;
+                background-color: #1C2321;
                 font-size: 1vw;
                 padding:10px;
+                margin-inline: auto;
                 border-radius: 8px;
                 color:white;
                 position:relative;
@@ -88,7 +91,7 @@ body{
                     // opacity:0;
                     border-radius: 50%;
                     background-color: #1C2321;
-                    transition:transform 0.39s ease-in-out , opacity 0.29s ease ;
+                    transition:transform 0.83s ease-in-out , opacity 0.29s ease ;
                 }
             }
         }
