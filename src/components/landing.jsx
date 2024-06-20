@@ -137,7 +137,8 @@ export default function Landing() {
             alt="me"
             initial={{ x: -500 }}
             // transition={{type:"tween"}}
-            animate={{ x: 0,rotate: picscale, scale: picrotat }}
+            // animate={{ x: 0,rotate: picscale, scale: picrotat }}
+            animate={{ x: 0 }}
           />
         </div>
       </div>
