@@ -132,11 +132,12 @@ export default function Landing() {
         )}
         <div id="pic-container">
           <motion.img
-            style={{ transform: `rotate(${picscale}deg) scale(${picrotat})` }}
+            // style={{ transform: `rotate(${picscale}deg) scale(${picrotat})` }}
             src="/nihal.png"
             alt="me"
             initial={{ x: -500 }}
-            animate={{ x: 0 }}
+            // transition={{type:"tween"}}
+            animate={{ x: 0,rotate: picscale, scale: picrotat }}
           />
         </div>
       </div>
