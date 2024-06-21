@@ -19,8 +19,8 @@ export default function Page({ trans }) {
                   cursor: content == "Content" ? "default" : "pointer",
                 }}
                 initial={{ opacity: 0, x: 0 }}
-                transition={{ type: "tween", delay: 3, duration: 0.38 }}
-                animate={{ opacity: 1, x: index % 2 == 0 ? -100 : 100 }}
+                transition={{ type: "tween", delay: 2, duration: 0.38 }}
+                animate={{ opacity: 1, x: index % 2 == 0 ? -50 : 50 }}
                 onClick={() => setCurr(content)}
               >
                 {content}
@@ -39,12 +39,12 @@ export default function Page({ trans }) {
           <motion.div
             id="bar"
             animate={{ rotate: "45deg", y: -90, x: -20 }}
-            transition={{ type: "tween", delay: 2.1, duration: 0.38 }}
+            transition={{ type: "tween", delay: 1.6, duration: 0.38 }}
           ></motion.div>
           <motion.div
             id="bar"
             animate={{ rotate: "45deg", y: 90, x: 20 }}
-            transition={{ type: "tween", delay: 2.1, duration: 0.38 }}
+            transition={{ type: "tween", delay: 1.6, duration: 0.38 }}
           ></motion.div>
         </div>
       </div>
