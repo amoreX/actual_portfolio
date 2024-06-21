@@ -169,6 +169,7 @@ body{
         z-index:9;
         position:absolute;
         transform:translateY(100vh);
+        overflow: hidden;
         height:100vh;
         background-color: $nice_white;
         width:100vw;
@@ -219,6 +220,7 @@ body{
         #content-container{
             width:50vw;
             // background-color: red;
+            position:relative;
             height:100vh;            
             display: flex;
             justify-content: center;
@@ -226,6 +228,13 @@ body{
             font-family: "Yatra One",sans-serif;
             color:black;
             font-size: 2vw;
+        }
+        #cross{
+            position:absolute;
+            right:2%;
+            top:2%;
+            cursor:pointer;
+            z-index: 9;
         }
         
         

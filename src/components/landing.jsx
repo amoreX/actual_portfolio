@@ -19,9 +19,8 @@ export default function Landing() {
   const [picy, setPicy] = useState(0);
   const [picscale, setPicscale] = useState(1);
   const [pageTran, setPagetran] = useState(false);
-  const [trans,setTrans]=useState("100vh");
-
-
+  const [trans, setTrans] = useState("100vh");
+ const [pageScale,setPagescale]=useState(0.8);
   const handlemouseenter = () => {
     setColor("white");
     setTransition(true);
@@ -50,24 +49,37 @@ export default function Landing() {
     setOpacity(0);
   };
 
-  const handlemouseclick=()=>{
+  const handlemouseclick = () => {
     setPagetran(true);
-    const p = document.getElementById("landing-container");
-    p.style.scale=0.8;
+    let p = document.getElementById("landing-container");
+    p.style.scale = 0.8;
     
     // console.log("clicked");
-    setTimeout(()=>{
-        p.style.transform="translateY(-110vh)";
-    },1000);
-    setTimeout(()=>{
+    setTimeout(() => {
+        p.style.transform = "translateY(-110vh)";
+    }, 1000);
+    setTimeout(() => {
         setTrans("0vh");
+    }, 1000);
+    setTimeout(() => {
+        setPagescale(1);
+    }, 1500);
+};
 
-    },1000);
-  }
-
-  const handlehomeclick=()=>{
+const handlehomeclick = () => {
+    let p = document.getElementById("landing-container");
     console.log("home clicked");
-  }
+    setPagescale(0.8);
+    setTimeout(()=>{
+        setTrans("120vh");
+        p.style.transform="translateY(0vh)";
+    },1000)
+    setTimeout(()=>{
+        p.style.scale = 1;
+        setPagetran(false);
+    },1500)
+
+  };
 
   return (
     <div id="main-container">
@@ -138,7 +150,7 @@ export default function Landing() {
             id="more"
             onMouseEnter={handlemouseenter}
             onMouseLeave={handlemouseleave}
-            onClick={()=>handlemouseclick()}
+            onClick={() => handlemouseclick()}
             initial={{ scale: 0.1, opacity: 0 }}
             transition={{
               type: "tween",
@@ -208,14 +220,14 @@ export default function Landing() {
             initial={{ x: -500 }}
             transition={{
               x: { type: "tween", ease: "easeInOut", duration: 0.7 },
-              y: {  type:"tween",duration: 0.1 },
-              scale: { type:"tween", duration: 0.1 },
+              y: { type: "tween", duration: 0.1 },
+              scale: { type: "tween", duration: 0.1 },
             }}
             animate={{ x: 0, y: picy, scale: picscale }}
           />
         </div>
       </div>
-      {pageTran && <Page trans={trans} homeclick={handlehomeclick} />}
+      {pageTran && <Page trans={trans} homeclick={handlehomeclick}  pagescale={pageScale}/>}
     </div>
   );
 }
