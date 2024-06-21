@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
-export default function Page({ trans }) {
+export default function Page({ trans,homeclick }) {
   const [curr, setCurr] = useState("About Me");
   const ind = ["Content", "About Me", "Tech Stack", "Projects", "Contact"];
-
+ 
   return (
     <div id="page-container" style={{ transform: `translateY(${trans})` }}>
       <div id="bars-container">
@@ -19,7 +19,7 @@ export default function Page({ trans }) {
                   cursor: content == "Content" ? "default" : "pointer",
                 }}
                 initial={{ opacity: 0, x: 0 }}
-                transition={{ type: "tween", delay: 2, duration: 0.38 }}
+                transition={{ type: "tween", delay: 1.3, duration: 0.38 }}
                 animate={{ opacity: 1, x: index % 2 == 0 ? -50 : 50 }}
                 onClick={() => setCurr(content)}
               >
@@ -39,12 +39,12 @@ export default function Page({ trans }) {
           <motion.div
             id="bar"
             animate={{ rotate: "45deg", y: -90, x: -20 }}
-            transition={{ type: "tween", delay: 1.6, duration: 0.38 }}
+            transition={{ type: "tween", delay: 1, duration: 0.38 }}
           ></motion.div>
           <motion.div
             id="bar"
             animate={{ rotate: "45deg", y: 90, x: 20 }}
-            transition={{ type: "tween", delay: 1.6, duration: 0.38 }}
+            transition={{ type: "tween", delay: 1, duration: 0.38 }}
           ></motion.div>
         </div>
       </div>

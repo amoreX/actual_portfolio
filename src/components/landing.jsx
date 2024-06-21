@@ -65,6 +65,10 @@ export default function Landing() {
     },1000);
   }
 
+  const handlehomeclick=()=>{
+    console.log("home clicked");
+  }
+
   return (
     <div id="main-container">
       <div id="landing-container">
@@ -211,7 +215,7 @@ export default function Landing() {
           />
         </div>
       </div>
-      {pageTran && <Page trans={trans}  />}
+      {pageTran && <Page trans={trans} homeclick={handlehomeclick} />}
     </div>
   );
 }
