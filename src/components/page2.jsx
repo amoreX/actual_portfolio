@@ -38,7 +38,7 @@ export default function Page({ trans, homeclick, pagescale }) {
                   cursor: content == "Content" ? "default" : "pointer",
                 }}
                 initial={{ opacity: 0, x: 0 }}
-                transition={{ type: "tween", delay: 2.5, duration: 0.38 }}
+                transition={{ type: "tween", delay: 1.5, duration: 0.38 }}
                 animate={{ opacity: 1, x: index % 2 == 0 ? -50 : 50 }}
                 onClick={() => setCurr(content)}
               >
@@ -58,12 +58,12 @@ export default function Page({ trans, homeclick, pagescale }) {
           <motion.div
             id="bar"
             animate={{ rotate: "45deg", y: -90, x: -36 }}
-            transition={{ type: "tween", delay: 2, duration: 0.38 }}
+            transition={{ type: "tween", delay: 1.2, duration: 0.38 }}
           ></motion.div>
           <motion.div
             id="bar"
             animate={{ rotate: "45deg", y: 90, x: 36, scale: 1.05 }}
-            transition={{ type: "tween", delay: 2, duration: 0.38 }}
+            transition={{ type: "tween", delay: 1.2, duration: 0.38 }}
           ></motion.div>
         </div>
       </div>

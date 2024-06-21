@@ -57,13 +57,13 @@ export default function Landing() {
     // console.log("clicked");
     setTimeout(() => {
         p.style.transform = "translateY(-110vh)";
-    }, 1000);
+    }, 400);
     setTimeout(() => {
         setTrans("0vh");
-    }, 1000);
+    }, 400);
     setTimeout(() => {
         setPagescale(1);
-    }, 1500);
+    }, 800);
 };
 
 const handlehomeclick = () => {
@@ -73,11 +73,11 @@ const handlehomeclick = () => {
     setTimeout(()=>{
         setTrans("120vh");
         p.style.transform="translateY(0vh)";
-    },1000)
+    },400)
     setTimeout(()=>{
         p.style.scale = 1;
         setPagetran(false);
-    },1500)
+    },800)
 
   };
 
