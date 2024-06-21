@@ -16,9 +16,12 @@ export default function Landing() {
   const [border, setBorder] = useState("0px 0px 0px white");
   const [subrect, setSubrect] = useState("#5E6572");
   const [scale, setScale] = useState(1);
-  const [pageTran, setPagetran] = useState(false);
   const [picy, setPicy] = useState(0);
   const [picscale, setPicscale] = useState(1);
+  const [pageTran, setPagetran] = useState(false);
+  const [trans,setTrans]=useState("100vh");
+
+
   const handlemouseenter = () => {
     setColor("white");
     setTransition(true);
@@ -46,6 +49,21 @@ export default function Landing() {
     setScale(1);
     setOpacity(0);
   };
+
+  const handlemouseclick=()=>{
+    setPagetran(true);
+    const p = document.getElementById("landing-container");
+    p.style.scale=0.8;
+    
+    // console.log("clicked");
+    setTimeout(()=>{
+        p.style.transform="translateY(-110vh)";
+    },1000);
+    setTimeout(()=>{
+        setTrans("0vh");
+
+    },1000);
+  }
 
   return (
     <div id="main-container">
@@ -116,6 +134,7 @@ export default function Landing() {
             id="more"
             onMouseEnter={handlemouseenter}
             onMouseLeave={handlemouseleave}
+            onClick={()=>handlemouseclick()}
             initial={{ scale: 0.1, opacity: 0 }}
             transition={{
               type: "tween",
@@ -192,7 +211,7 @@ export default function Landing() {
           />
         </div>
       </div>
-      {pageTran && <Page />}
+      {pageTran && <Page trans={trans}  />}
     </div>
   );
 }
