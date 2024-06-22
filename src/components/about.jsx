@@ -5,16 +5,17 @@ export default function About() {
   const [modal, setModal] = useState(false);
   const[op,setOp]=useState(0);
   const lines = [
+    "Undergrad at CMRIT,BLR",
     "Aspiring Web Developer",
-    "Grinding DSA",
     "Love to Design Sites",
+    "Grinding DSA",
     "Getting into AI",
     "Open to work",
-    "Undergrad at CMRIT,BLR - 8.0 CGPA",
     "Contact Me?",
     "Mail: rahmannihal72@gmail.com",
     "X: @nihaliscoding",
     "LinkedIn: /in/nihal-is-coding",
+    "Github: amoreX"
   ];
   const handleclick = (i) => {
     if (i == 7) {
@@ -30,6 +31,9 @@ export default function About() {
     }
     if (i == 9) {
       window.open("https://www.linkedin.com/in/nihal-is-coding/", "_blank");
+    }
+    if (i == 10) {
+      window.open("https://github.com/amoreX", "_blank");
     }
   };
   return (

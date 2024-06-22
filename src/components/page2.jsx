@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import About from "./about.jsx";
 import Tech from "./tech.jsx";
+import Proj from "./proj.jsx"
 export default function Page({ trans, homeclick, pagescale }) {
   const [curr, setCurr] = useState("About Me");
   const ind = [ "About Me", "Tech Stack", "Projects"];
@@ -75,6 +76,7 @@ export default function Page({ trans, homeclick, pagescale }) {
         {curr=="Content"?"Bruh " : null}
         {curr=="About Me"?<About /> : null}
         {curr=="Tech Stack"?<Tech /> : null}
+        {curr=="Projects"?<Proj /> : null}
       </motion.div>
       <motion.div
         id="cross"
