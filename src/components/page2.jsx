@@ -5,7 +5,7 @@ import About from "./about.jsx";
 import Tech from "./tech.jsx";
 export default function Page({ trans, homeclick, pagescale }) {
   const [curr, setCurr] = useState("About Me");
-  const ind = ["Content", "About Me", "Tech Stack", "Projects", "Contact"];
+  const ind = [ "About Me", "Tech Stack", "Projects"];
   const cross = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
