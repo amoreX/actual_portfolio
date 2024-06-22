@@ -55,3 +55,63 @@
     }
   }
 }
+#tech-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  align-items: center;
+  #tech-title {
+    font-family: "Yatra One", sans-serif;
+    font-size: 2vw;
+    display: flex;
+    width: fit-content;
+    margin-inline: auto;
+    flex-direction: column;
+    // align-items: center;
+    #under-tech {
+      // width:100%;
+      height: 1px;
+      background-color: black;
+    }
+  }
+  #content-tech {
+    font-family: "Work Sans", system-ui;
+    font-size: 2vw;
+    // position: relative;
+    display: flex;
+    flex-direction: column;
+    height:60%;
+    align-items: center;
+    justify-content: center;
+    #actual-line-tech {
+      position: relative;
+      z-index: 1; // Ensure text is above the pseudo-element
+      transition: color 0.05s ease-in-out;
+      cursor:default;
+
+      &::before {
+        content: "";
+        position: absolute;
+        margin-inline: auto;
+        // top: 50%;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background-color: #1C2321; // Change this to your desired color
+        z-index: -1; // Ensure pseudo-element is behind the text
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.3s ease; // Animation for the cover
+      }
+
+      &:hover::before {
+        transform: scaleX(1); // Full width on hover
+      }
+      &:hover{
+        color:white;
+      }
+    }
+  }
+}

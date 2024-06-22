@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import About from "./about.jsx";
+import Tech from "./tech.jsx";
 export default function Page({ trans, homeclick, pagescale }) {
   const [curr, setCurr] = useState("About Me");
   const ind = ["Content", "About Me", "Tech Stack", "Projects", "Contact"];
@@ -71,7 +72,9 @@ export default function Page({ trans, homeclick, pagescale }) {
       <motion.div
         id="content-container"
       >
+        {curr=="Content"?"Bruh " : null}
         {curr=="About Me"?<About /> : null}
+        {curr=="Tech Stack"?<Tech /> : null}
       </motion.div>
       <motion.div
         id="cross"
