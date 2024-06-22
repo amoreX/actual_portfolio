@@ -219,15 +219,14 @@ body{
         }
         #content-container{
             width:50vw;
+            box-sizing: border-box;
+            padding:2%;
             // background-color: red;
             position:relative;
             height:100vh;            
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: "Yatra One",sans-serif;
-            color:black;
-            font-size: 2vw;
         }
         #cross{
             position:absolute;

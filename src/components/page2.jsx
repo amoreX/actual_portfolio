@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import About from "./about.jsx";
 export default function Page({ trans, homeclick, pagescale }) {
   const [curr, setCurr] = useState("About Me");
   const ind = ["Content", "About Me", "Tech Stack", "Projects", "Contact"];
@@ -69,11 +70,8 @@ export default function Page({ trans, homeclick, pagescale }) {
       </div>
       <motion.div
         id="content-container"
-        initial={{ opacity: 0, y: 56 }}
-        transition={{ type: "tween", delay: 3.5, duration: 0.29 }}
-        animate={{ opacity: 1, y: 0 }}
       >
-        Content soon
+        {curr=="About Me"?<About /> : null}
       </motion.div>
       <motion.div
         id="cross"
