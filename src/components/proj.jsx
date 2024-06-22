@@ -63,7 +63,11 @@ export default function Project() {
         ></motion.span>
       </div>
       <div id="projects">
-        <motion.span id="each-proj">
+        <motion.span id="each-proj" 
+            initial={{scale:0}}
+            transition={{ type: "tween", delay:0.5,duration:0.38}}
+            animate={{scale:1}}
+        >
           <motion.span id="proj-pic" onClick={()=>handleclick(1)}>
           {hovWpm ? (
               <video autoPlay loop muted onMouseLeave={handlewpmleave}>
@@ -90,7 +94,11 @@ export default function Project() {
         }
         </motion.span>
         
-        <motion.span id="each-proj">
+        <motion.span id="each-proj"
+        initial={{scale:0}}
+        transition={{ type: "tween", delay:0.8,duration:0.38}}
+        animate={{scale:1}}
+        >
           <motion.span id="proj-pic" onClick={()=>handleclick(2)}>
           {hovWeather ? (
               <video autoPlay loop muted onMouseLeave={handleweatherleave}>
@@ -116,7 +124,11 @@ export default function Project() {
         }
         </motion.span>
 
-        <motion.span id="each-proj">
+        <motion.span id="each-proj"
+        initial={{scale:0}}
+        transition={{ type: "tween", delay:1,duration:0.38}}
+        animate={{scale:1}}
+        >
           <motion.span id="proj-pic" onClick={()=>handleclick(3)}>
           {hovgit ? (
               <video autoPlay loop muted onMouseLeave={handlegitleave}>
@@ -142,7 +154,11 @@ export default function Project() {
           null
         }
         </motion.span>
-        <motion.span id="each-proj">
+        <motion.span id="each-proj"
+        initial={{scale:0}}
+        transition={{ type: "tween", delay:1.4,duration:0.38}}
+        animate={{scale:1}}
+        >
           <motion.span id="proj-pic" onClick={()=>handleclick(4)}>
           {hovtwit ? (
               <video autoPlay loop muted onMouseLeave={handletwitleave}>
